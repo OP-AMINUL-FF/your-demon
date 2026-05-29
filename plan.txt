@@ -1,0 +1,115 @@
+YOUR DEMON — COMPLETE PROJECT PLAN
+=====================================
+Developer   : OP AMINUL FF
+Company     : OPX
+Project     : Your Demon
+GitHub      : https://github.com/OP-AMINUL-FF/your-demon
+Single Repo : ALL files in one repo
+Based On    : Stryker App v4.0 (EOL)
+
+========================================================================
+PHASE 1: GITHUB INFRASTRUCTURE  [DONE]
+========================================================================
+[✓] 1.1 Create main repo: OP-AMINUL-FF/your-demon
+[✓] 1.2 All files in one repo structure:
+     your-demon/
+     ├── updater/      # Update check files (update, msg JSON)
+     ├── modules/      # Module definitions (modules.list)
+     ├── chroot/       # Chroot tarballs (release downloads)
+     ├── app/          # Android app source
+     ├── logviewer/    # Log viewer source
+     └── ...
+
+========================================================================
+PHASE 2: SOURCE CODE REBRANDING  [IN PROGRESS]
+========================================================================
+[✓] 2.1 New package dirs created: com/opx/yourdemon/
+[✓] 2.2 Java files copied to new package structure
+[✓] 2.3 Package declarations updated in all 134+ Java files
+[✓] 2.4 Logviewer package migrated
+[~] 2.5 URL updates in source code — REMOVE old: stryker-project/...
+                     — ADD new: OP-AMINUL-FF/your-demon/...
+                     — All paths go to main repo, not separate repos
+
+--- Still TODO in Phase 2 ---
+[ ] 2.6 app/build.gradle — change applicationId, versionCode, versionName
+[ ] 2.7 logviewer/build.gradle — change applicationId
+[ ] 2.8 settings.gradle — rootProject.name
+[ ] 2.9 AndroidManifest.xml (app) — package, sharedUserId, label, theme
+[ ] 2.10 AndroidManifest.xml (logviewer) — package, sharedUserId, label
+[ ] 2.11 strings.xml — app_name, version, all "Stryker" → "Your Demon"
+[ ] 2.12 themes.xml — rename theme, remove Stryker references
+[ ] 2.13 All hardcoded paths /data/data/com.zalexdev.stryker/ checked
+[ ] 2.14 All hardcoded "Stryker" strings in code replaced
+[ ] 2.15 Update storage paths: /Stryker/ → /YourDemon/
+[ ] 2.16 Update file names: strykerupdate → yourdemonupdate, etc.
+[ ] 2.17 Account/About screens — replace URLs with OPX info
+[ ] 2.18 Dashboard.java version check — fix int version to use BuildConfig
+[ ] 2.19 Delete old com/zalexdev/ directory tree
+
+========================================================================
+PHASE 3: UPDATE SYSTEM (SINGLE REPO)
+========================================================================
+[ ] 3.1 Update check URL → https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/update
+[ ] 3.2 Message URL → https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/msg
+[ ] 3.3 Module list URL → https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/modules/modules.list
+[ ] 3.4 Wiki URL → https://github.com/OP-AMINUL-FF/your-demon/wiki
+[ ] 3.5 Chroot URLs → https://github.com/OP-AMINUL-FF/your-demon/releases/download/v1.0/core64.tar.gz
+[ ] 3.6 Fix Dashboard version check: use BuildConfig.VERSION_CODE instead of hardcoded 23
+[ ] 3.7 Update updater/update JSON format for single-repo
+
+========================================================================
+PHASE 4: BUILD CONFIG & CI/CD
+========================================================================
+[ ] 4.1 Update .github/workflows/android.yml for new package
+[ ] 4.2 Create release workflow: on tag v*, build APK, create GitHub Release
+[ ] 4.3 Test build locally with ./gradlew assembleRelease
+[ ] 4.4 Push to GitHub and verify build
+
+========================================================================
+PHASE 5: INITIAL RELEASE
+========================================================================
+[ ] 5.1 Create v1.0 tag and release on GitHub
+[ ] 5.2 Upload APK to release
+[ ] 5.3 Upload chroot tarballs to release
+[ ] 5.4 Verify update check works end-to-end from single repo
+[ ] 5.5 Clean up old Stryker files and documentation
+
+========================================================================
+URL STRUCTURE (SINGLE REPO)
+========================================================================
+Update check:    https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/update
+Messages:        https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/msg
+Update.txt:      https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/update.txt
+Msg.txt:         https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/msg.txt
+Module list:     https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/modules/modules.list
+Wiki:            https://github.com/OP-AMINUL-FF/your-demon/wiki
+Chroot 64bit:    https://github.com/OP-AMINUL-FF/your-demon/releases/download/v1.0/core64.tar.gz
+Chroot 32bit:    https://github.com/OP-AMINUL-FF/your-demon/releases/download/v1.0/core32.tar.gz
+APK download:    https://github.com/OP-AMINUL-FF/your-demon/releases/download/v1.0/your-demon-1.0.apk
+
+========================================================================
+FILES TO MODIFY (COMPLETE LIST)
+========================================================================
+Build Config:
+  app/build.gradle, logviewer/build.gradle, settings.gradle
+
+Manifests:
+  app/src/main/AndroidManifest.xml
+  logviewer/src/main/AndroidManifest.xml
+
+Resources:
+  app/src/main/res/values/strings.xml
+  app/src/main/res/values/themes.xml
+  app/src/main/res/values-night/themes.xml
+  app/src/main/res/values/dimens.xml (if has Stryker refs)
+  app/src/main/res/menu/*.xml (if has Stryker refs)
+
+Java files with URL/path changes:
+  Dashboard.java, Core.java, Slide3.java, Updater.java
+  Fixer.java, CheckUpdates.java, CheckMsg.java, CheckInet.java
+  ActionsFragment.java, Account.java, About.java
+  MainActivity.java, Settings.java
+
+CI/CD:
+  .github/workflows/android.yml

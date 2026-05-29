@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_card">#FF2C2C2C</color>
+    <color name="bg_dark">#FF1E1E1E</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#FF1565C0</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Log Viewer</string>
+    <style name="Theme.LogViewer" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:statusBarColor">@color/blue</item>
+    </style>
+</resources>
