@@ -26,8 +26,8 @@ PHASE 1: GITHUB INFRASTRUCTURE SETUP
      - Status: modules.list created with 2 sample modules ✓
 [✓] 1.4 Create chroot repo: OP-AMINUL-FF/your-demon-chroot
      - Will host the Alpine Linux chroot tarballs for releases
-     - Initial release: v1.0 with basic Alpine + pentest tools
-     - Status: Repo created ✓ | Releases/tarballs pending (Phase 5)
+      - Initial release: v1.0 with basic Alpine + pentest tools
+      - Status: Repo created ✓ | v1.0 release with core64.tar.gz, core32.tar.gz ✓
 ========================================================================
 PHASE 2: SOURCE CODE REBRANDING (APP → YOUR DEMON)
 ========================================================================
@@ -162,10 +162,10 @@ PHASE 5: CHROOT (CORE) CREATION
        - 238 packages total, 410 MiB installed, 137 MB compressed
 [✓] 5.2 Build Alpine Linux chroot for arm32 (armv7l)
        - Same tool stack, 237 packages, 338 MiB installed, 133 MB compressed
-[✓] 5.3 Upload to your-demon-chroot releases
-       - core64.tar.gz → https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/download/v1.0/core64.tar.gz
-       - core32.tar.gz → https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/download/v1.0/core32.tar.gz
-       - Release: https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/tag/v1.0
+[✓] 5.3 Upload to your-demon-chroot releases ✓
+        - core64.tar.gz → https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/download/v1.0/core64.tar.gz
+        - core32.tar.gz → https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/download/v1.0/core32.tar.gz
+        - Release: https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/tag/v1.0
 [ ] 5.4 Test chroot extraction on rooted device
 [ ] 5.5 Verify core tools work inside chroot
        - sqlmap needs pip3 install on first boot (opt/install-pips.sh)
@@ -201,14 +201,14 @@ PHASE 7: CI/CD & BUILD PIPELINE
        - Base64: stored above for GitHub Secrets setup
 ========================================================================
 PHASE 8: INITIAL RELEASE
-========================================================================
-[ ] 8.1 Push all code to OP-AMINUL-FF/your-demon
-[ ] 8.2 Create v1.0 tag and release
-[ ] 8.3 Upload initial APK to release
-[ ] 8.4 Upload chroot to your-demon-chroot releases
-[ ] 8.5 Verify update check works end-to-end
-[ ] 8.6 Verify module repository loads
-[ ] 8.7 Install on rooted Android device and test all features
+=======================================================================
+[✓] 8.1 Push all code to OP-AMINUL-FF/your-demon
+[✓] 8.2 Create v1.0 tag and release (tag pushed, release.yml CI triggered)
+[~] 8.3 Upload initial APK to release (CI builds & uploads via release.yml on tag push)
+[✓] 8.4 Upload chroot to your-demon-chroot releases (core64.tar.gz, core32.tar.gz on v1.0 release)
+[~] 8.5 Verify update check E2E (CI build must finish; raw.githubusercontent URLs resolve ✓)
+[✓] 8.6 Verify module repository loads (modules.list raw URL resolves ✓, module ZIPs resolve ✓)
+[ ] 8.7 Install on rooted Android device and test all features (physical device needed)
 ========================================================================
 PHASE 9: DOCUMENTATION & CLEANUP
 ========================================================================
