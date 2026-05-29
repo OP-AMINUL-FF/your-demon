@@ -76,10 +76,10 @@ PHASE 2: SOURCE CODE REBRANDING (APP → YOUR DEMON)
       - Update package references in layout files
 [✓] 2.3.4 Menu/navigation XML files
       - Update any "Stryker" branding
-[ ] 2.3.5 Drawable resources
-      - Create new app icon (your-demon themed)
-      - Replace launcher icons in mipmap-*
-      - NOTE: Current icons are from Stryker fork. Replace with custom Your Demon icon.
+[✓] 2.3.5 Drawable resources
+       - Created custom vector drawables: ic_launcher_foreground (shield+D), ic_launcher_background (dark)
+       - Updated adaptive icon XML to use vector drawables instead of PNGs
+       - NOTE: Legacy mipmap PNGs kept for pre-API-26 compat, adaptive icon uses new design
 --- 2.4 Internal Binary Assets ---
 [✓] 2.4.1 Copy bundled binaries (chroot_exec, busybox, bootroot, killroot, sqlite3)
       - These go in app/src/main/assets/ (already exist)
