@@ -75,9 +75,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.yourdemon.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.YourDemon.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.yourdemon.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.YourDemon.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="Theme.YourDemon.Splash" parent="Theme.Material3.Light.NoActionBar">
         <item name="windowSplashScreenBackground">@color/nightwhite</item>

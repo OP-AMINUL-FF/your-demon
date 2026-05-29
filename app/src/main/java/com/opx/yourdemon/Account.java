@@ -79,10 +79,10 @@ public class Account extends Fragment {
         MaterialCardView card = viewroot.findViewById(R.id.creditcard);
         ExpandableLayout menu = activity.findViewById(R.id.menu_expand);
         MaterialCardView coffee = viewroot.findViewById(R.id.coffee);
-        web.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
-        tg.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
-        pda.setOnClickListener(view -> openlink("https://4pda.to/forum/index.php?showtopic=1037129"));
-        coffee.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
+        web.setOnClickListener(view -> openlink("https://opaminulff.vercel.app/"));
+        tg.setOnClickListener(view -> openlink("https://www.youtube.com/@OPAMINULFF"));
+        pda.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
+        coffee.setOnClickListener(view -> {});
         ethereum.setOnClickListener(view -> copy(context,"0x7D91d522244C94a11422C0481c9fdBbFBA01784B"));
         bitcoin.setOnClickListener(view -> copy(context,"bc1q0sewu9cr9rh2uf7qzvxmmvc2z7x7vc9wp7v8f8"));
         card.setOnClickListener(view -> copy(context,"5375411503013075"));

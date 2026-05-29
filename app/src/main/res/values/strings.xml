@@ -240,8 +240,8 @@
     <string name="install_stm_files">Install the .stm files </string>
     <string name="unmount_nchroot">Unmount\nChroot </string>
     <string name="safe_modification_data_lose_prevent">Safe modification. Data Loss Prevention </string>
-    <string name="delete_nstryker">Remove\nYour Demon </string>
-    <string name="delete_stryker_and_chroot">Remove Your Demon and chroot. </string>
+    <string name="delete_app">Remove\nYour Demon </string>
+    <string name="delete_app_and_chroot">Remove Your Demon and chroot. </string>
     <string name="hi">Hey! </string>
     <string name="thanks">Thanks for installing the app! It only takes a few steps to complete the installation! </string>
     <string name="go">Go! </string>
@@ -310,7 +310,7 @@
     <string name="no_news">No news - this a good news?.. Right?</string>
     <string name="no_thx">No, thx</string>
     <string name="pls_install">Please, instal {mn} in repository to use this feature!</string>
-    <string name="magisk_stryker">Want to turn off notifications from Magisk for Your Demon? Since this program uses root quite often, this can get in the way. Click to disable</string>
+    <string name="magisk_notification">Want to turn off notifications from Magisk for Your Demon? Since this program uses root quite often, this can get in the way. Click to disable</string>
     <string name="tour_mode">Tour Mode — No root access. UI preview only, features require root.</string>
     <string name="oops_this_page_is_under_development_see_you_after_update_s">Oops. This page is under development! See you after update(s)!</string>
     <string name="go_to_repository">Go to repository</string>

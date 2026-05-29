@@ -4,8 +4,8 @@
 #############################
 #### DEFINE GLOBAL VARIABLES ####
 #############################
-MNT= /data/local/stryker/beta/
-BUSYBOX= /data/data/com.zalexdev.stryker/files/busybox
+MNT= /data/local/YourDemon/beta/
+BUSYBOX= /data/data/com.opx.yourdemon/files/busybox
 if [ -z "$MNT" ]; then
     echo "[-] The \$MNT variable is not defined, logic error."
     exit 2

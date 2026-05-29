@@ -733,7 +733,7 @@
 
                 android:gravity="right"
                 android:paddingRight="10dp"
-                android:text="@string/delete_nstryker"
+                android:text="@string/delete_app"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -743,7 +743,7 @@
                 android:layout_marginTop="70dp"
 
                 android:padding="10dp"
-                android:text="@string/delete_stryker_and_chroot"
+                android:text="@string/delete_app_and_chroot"
                 android:textSize="16dp"
                 />
         </com.google.android.material.card.MaterialCardView>

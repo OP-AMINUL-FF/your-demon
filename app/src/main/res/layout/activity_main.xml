@@ -38,7 +38,7 @@
                 android:src="@drawable/menu" />
 
             <TextView
-                android:id="@+id/stryker_main_logo"
+                android:id="@+id/main_logo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

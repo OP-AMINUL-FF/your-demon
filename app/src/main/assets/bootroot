@@ -1,9 +1,9 @@
 #!/system/bin/sh
 
-## R1 by @ZALEXDEV
+## R1 by OP-AMINUL-FF (OPX)
 ###
-FROM_ZALEXDEV_TO_WORLD=$(readlink -f $0)
-. ${FROM_ZALEXDEV_TO_WORLD%/*}/bootroot_env
+FROM_DEV_TO_WORLD=$(readlink -f $0)
+. ${FROM_DEV_TO_WORLD%/*}/bootroot_env
 ###
 
 
@@ -126,10 +126,8 @@ f_mount_fs() {
     > $MNT/etc/resolv.conf # empty dns entries
     for i in 1 2 3 4; do
         if [ -z "$(getprop net.dns${i})" ]; then
-            # we go through 1-4 dns servers and break out of loop on empty
             break
         else
-            # add local/device dns server first
             echo "nameserver $(getprop net.dns${i})" >> $MNT/etc/resolv.conf
         fi
     done
@@ -138,9 +136,9 @@ f_mount_fs() {
 
     ######### SET NETWORK AND HOSTNAME ########
     $BUSYBOX sysctl -w net.ipv4.ip_forward=1
-    echo "127.0.0.1		 localhost stryker"                                       > $MNT/etc/hosts
-    echo "::1				 localhost ip6-localhost ip6-loopback" >> $MNT/etc/hosts
-    echo "stryker"                                                                            > $MNT/proc/sys/kernel/hostname
+    echo "127.0.0.1        localhost yourdemon"                                       > $MNT/etc/hosts
+    echo "::1              localhost ip6-localhost ip6-loopback" >> $MNT/etc/hosts
+    echo "yourdemon"                                                                   > $MNT/proc/sys/kernel/hostname
 
     ######### Setup done #########
     echo "[+] The Chroot has been started."

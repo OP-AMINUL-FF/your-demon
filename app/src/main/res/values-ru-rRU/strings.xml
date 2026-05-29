@@ -241,8 +241,8 @@
     <string name="install_stm_files">Установите файлы .stm </string>
     <string name="unmount_nchroot">Размонти-\nровать\ </string>
     <string name="safe_modification_data_lose_prevent">Предотвращение потери данных </string>
-    <string name="delete_nstryker">Удалить\nYour Demon </string>
-    <string name="delete_stryker_and_chroot">Удалите Your Demon и chroot. </string>
+    <string name="delete_app">Удалить\nYour Demon </string>
+    <string name="delete_app_and_chroot">Удалите Your Demon и chroot. </string>
     <string name="hi">Привет! </string>
     <string name="thanks">Спасибо что установил приложение! Для завершения установки требуется всего несколько шагов! </string>
     <string name="go">Поехали! </string>
@@ -278,7 +278,6 @@
     <string name="failed_info">Не удалось получить информацию </string>
     <string name="coose_port">Выберите порт… </string>
 
-    <string name="куыещкув">Восстановленно! </string>
     <string name="webauth">"Панель - " </string>
     <string name="psk">"Пароль - " </string>
     <string name="choose_opt">Выберите опцию </string>
@@ -309,7 +308,7 @@
     <string name="no_news">Пока новостей нет! Это ведь тоже хорошая новость?..</string>
     <string name="no_thx">No, thx</string>
     <string name="pls_install">Пожалуйста, установите {mn} в репозитории, чтобы использовать эту функцию!</string>
-    <string name="magisk_stryker">Хотите отключить уведомление от Magisk-а для приложение Your Demon? Так как это программа довольно часто использует рут, это может мешать. Нажмите что бы отключить</string>
+    <string name="magisk_notification">Хотите отключить уведомление от Magisk-а для приложение Your Demon? Так как это программа довольно часто использует рут, это может мешать. Нажмите что бы отключить</string>
     <string name="oops_this_page_is_under_development_see_you_after_update_s">Упс. Эта страница находится в разработке! Увидимся после обновлений!</string>
     <string name="go_to_repository">Перейти в репозиторий</string>
     <string name="ip_ranges">IP диапазоны</string>

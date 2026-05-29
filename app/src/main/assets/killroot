@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
-FROM_ZALEXDEV_TO_WORLD=$(readlink -f $0)
-. ${FROM_ZALEXDEV_TO_WORLD%/*}/bootroot_env
+FROM_DEV_TO_WORLD=$(readlink -f $0)
+. ${FROM_DEV_TO_WORLD%/*}/bootroot_env
 
 #############################
 #### DEFINE GLOBAL VARIABLES ####

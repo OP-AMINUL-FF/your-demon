@@ -97,9 +97,9 @@ public class Slide3 extends Fragment {
                 clear();
                 boolean core_ok;
                 if (core.is64Bit()){
-                    core_ok = download("https://github.com/OP-AMINUL-FF/your-demon/releases/download/v1.0/core64.tar.gz", "yourdemon.tar.gz", progress_status, progress);
+                    core_ok = download("https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/download/v1.0/core64.tar.gz", "yourdemon.tar.gz", progress_status, progress);
                 }else {
-                    core_ok = download("https://github.com/OP-AMINUL-FF/your-demon/releases/download/v1.0/core32.tar.gz", "yourdemon.tar.gz", progress_status, progress);
+                    core_ok = download("https://github.com/OP-AMINUL-FF/your-demon-chroot/releases/download/v1.0/core32.tar.gz", "yourdemon.tar.gz", progress_status, progress);
                 }
                 if (core_ok) {
                     setText(title, core.str("install_unpack"), true);

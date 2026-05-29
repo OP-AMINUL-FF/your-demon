@@ -21,10 +21,20 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file(System.getenv("STORE_FILE") ?: "../your-demon.jks")
+            storePassword System.getenv("STORE_PASSWORD") ?: "yourdemon123"
+            keyAlias System.getenv("KEY_ALIAS") ?: "your-demon"
+            keyPassword System.getenv("KEY_PASSWORD") ?: "yourdemon123"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

@@ -162,17 +162,17 @@ public class Dashboard extends Fragment  {
         if (core.getBoolean("auto_update")){
         // This code is checking for updates.
         new Thread(() -> {
-            JSONObject update = core.getjsonbyurl("https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/update");
+            JSONObject update = core.getjsonbyurl("https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon-updater/main/update");
             try {
-            int version = 23;
+            int version = BuildConfig.VERSION_CODE;
             int newversion = update.getInt("version");
             if (newversion>version){
                 activity.runOnUiThread(() -> {
                     try {
                         if (!update.getBoolean("isfix")){
-                        updatedialog(update.getString("name"),update.getString("srcapk"),update.getString("chroot32"),update.getString("chroot64"));}
+                        updatedialog(update.getString("name"),update.getString("apk_url"),update.getString("chroot32_url"),update.getString("chroot64_url"));}
                         else{
-                            updatefix(update.getString("srcapk"));
+                            updatefix(update.getString("apk_url"));
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -185,7 +185,7 @@ public class Dashboard extends Fragment  {
         }).start();
         // This code is checking for a new update message from the server.
         new Thread(() -> {
-            JSONObject msg = core.getjsonbyurl("https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/updater/msg");
+            JSONObject msg = core.getjsonbyurl("https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon-updater/main/msg");
             try {
                 if (msg.has("msg") && !core.getListString("msgs").contains(msg.getString("title"))){
                     ArrayList<String> msgs = core.getListString("msgs");
@@ -233,7 +233,7 @@ public class Dashboard extends Fragment  {
     public void updatedialog(String name, String urlapk, String urlchroot32,String urlchroot64) {
         new MaterialAlertDialogBuilder(context)
                 .setTitle(R.string.new_update)
-                .setMessage(getString(R.string.want_update) + "23" + getString(R.string.doo) + name + getString(R.string.rvregre))
+                .setMessage(getString(R.string.want_update) + " " + BuildConfig.VERSION_NAME + " " + getString(R.string.doo) + " " + name + getString(R.string.rvregre))
                 .setPositiveButton(R.string.yes, (dialogInterface, i) -> {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction().replace(R.id.flContent, new Updater(urlapk,urlchroot32,urlchroot64)).commit();

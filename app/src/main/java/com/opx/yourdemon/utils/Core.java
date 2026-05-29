@@ -770,7 +770,7 @@ public class Core {
      */
     public ArrayList<Module> getModules(){
         ArrayList<Module> modules = new ArrayList<>();
-        JSONObject getmodules = getjsonbyurl("https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon/main/modules/modules.list");
+        JSONObject getmodules = getjsonbyurl("https://raw.githubusercontent.com/OP-AMINUL-FF/your-demon-modules/main/modules.list");
         try {
             if (getmodules.has("status") && getmodules.getBoolean("status")){
                 JSONArray mlist = getmodules.getJSONArray("list");

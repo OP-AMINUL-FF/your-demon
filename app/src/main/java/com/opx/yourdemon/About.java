@@ -53,10 +53,10 @@ public class About extends Fragment {
             public void onSwipeLeft() { }
             public void onSwipeBottom() { core.openmenu(menu); }
         });
-        web.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
-        donate.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
-        tg.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
-        pda.setOnClickListener(view -> openlink("https://4pda.to/forum/index.php?showtopic=1037129"));
+        web.setOnClickListener(view -> openlink("https://opaminulff.vercel.app/"));
+        donate.setOnClickListener(view -> {});
+        tg.setOnClickListener(view -> openlink("https://www.youtube.com/@OPAMINULFF"));
+        pda.setOnClickListener(view -> openlink("https://github.com/OP-AMINUL-FF/your-demon"));
 
         info.setText(getDeviceName() + "\n" + core.str("plata") + Build.BOARD + "\n" + "Android SDK: " + Build.VERSION.SDK);
         return viewroot;

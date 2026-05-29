@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
-        TextView logo = findViewById(R.id.stryker_main_logo);
+        TextView logo = findViewById(R.id.main_logo);
 
         ImageView menu_toggle = findViewById(R.id.menu_img);
         menu_toggle.setOnClickListener(view -> menu.toggle());

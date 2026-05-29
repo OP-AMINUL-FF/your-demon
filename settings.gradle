@@ -7,6 +7,6 @@ dependencyResolutionManagement {
         maven { url 'https://jcenter.bintray.com' } // jcenter mirror for jcifs
     }
 }
-rootProject.name = "YourDemon"
+rootProject.name = "your-demon"
 include ':app'
 include ':logviewer'

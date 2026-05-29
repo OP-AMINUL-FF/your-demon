@@ -25,7 +25,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/google_sans"
-        android:id="@+id/stryker_main_logo"
+        android:id="@+id/main_logo"
         android:text="Your Demon ⚡"
         android:textSize="30dp"
         android:textStyle="bold" />
