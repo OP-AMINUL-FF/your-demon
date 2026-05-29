@@ -37,8 +37,14 @@ APKINDEX
 DESCRIPTION
 
 # Module repository artifacts
-modulerespository/
 modules/
+
+# Updater files (client-side mirror)
+updater/
+
+# Old chroot tarballs
+chroot/*.tar.gz
+chroot/*.tgz
 
 # OS files
 Thumbs.db

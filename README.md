@@ -1,54 +1,52 @@
-## <center> Stryker app</center>
-
+## <center> Your Demon</center>
 
 [中文介绍](./docs/zh-CN/README.md)
+
+> **Your Demon** — Android Penetration Testing Suite by OPX
+> Forked from [Stryker App](https://github.com/stryker-project/app) v4.0 (EOL)
+
 ###### Requirements
 
-1. Android 8.0+ 
-2. Root (Magisk 23.0+)
-3. 64bit CPU (preferred)
+1. Android 8.0+ (API 26)
+2. Root access (Magisk 23.0+)
+3. 64-bit CPU (preferred)
+4. 4 GB+ free space (for chroot environment)
 
-###### Description
+###### Features
 
-Stryker is a new generation mobile pentest application. It will help you to test your networks and devices for common vulnerabilities without special skills and knowledge. And also provides you to add your expolits and new features!
-# 📢 Stryker App — End of Life
+- **WiFi Security Auditing** — WPS testing, handshake capture, network scanning
+- **Chroot Environment** — Full Alpine Linux with nmap, hydra, John the Ripper, aircrack-ng, sqlmap, and more
+- **Module System** — Extensible exploit/scan modules (EternalBlue, SMBGhost, etc.)
+- **Network Tools** — Port scanning, SMB enumeration, packet capture, ARP scanning
+- **Brute Force** — Hydra-based authentication testing
+- **Automatic Updates** — Self-updating via GitHub Releases
 
-> **Thank you for being part of the journey.**
-
----
-
-Hey everyone,
-
-Thank you for all the time we've shared and for being part of the Stryker community. Your support, feedback, bug reports, and trust over the years have meant more than words can express.
-
-**As of today, Stryker App will no longer receive updates, and the servers have been officially shut down.**
-
-It's been an incredible ride — from the first alpha back in July 2021 to 140,000+ installations and a passionate community of security enthusiasts around the world. None of this would have been possible without you.
-
----
-
-### ⚠️ What this means
-
-- 🔴 **No further updates** will be released
-- 🔴 **Servers are permanently offline**
-- 🟡 The app may still function in offline/local mode, but no support will be provided
-
----
-
-### 📬 Stay in Touch
+###### Resources
 
 | | |
 |---|---|
-| 🌐 **Website** | [zalexdev.com](https://zalexdev.com) |
-| ✈️ **Telegram** | [@strykerapp](https://t.me/strykerapp) |
+| **Source Code** | [github.com/OP-AMINUL-FF/your-demon](https://github.com/OP-AMINUL-FF/your-demon) |
+| **Releases** | [github.com/OP-AMINUL-FF/your-demon/releases](https://github.com/OP-AMINUL-FF/your-demon/releases) |
+| **Chroot Images** | [github.com/OP-AMINUL-FF/your-demon-chroot](https://github.com/OP-AMINUL-FF/your-demon-chroot) |
+| **Modules** | [github.com/OP-AMINUL-FF/your-demon-modules](https://github.com/OP-AMINUL-FF/your-demon-modules) |
 
----
+###### Installation
 
+1. Download the latest APK from [Releases](https://github.com/OP-AMINUL-FF/your-demon/releases)
+2. Install on a rooted device: `adb install app-debug.apk`
+3. Open the app — chroot images download automatically on first launch
+4. Grant root permissions when prompted
 
-### 🙏 Thank You
+###### Building from Source
 
-To every user, tester, contributor, and supporter — **thank you**. You made Stryker what it was.
+```bash
+git clone https://github.com/OP-AMINUL-FF/your-demon.git
+cd your-demon
+./gradlew assembleDebug
+```
 
-Take care ✌️
+The debug APK will be at `app/build/outputs/apk/debug/app-debug.apk`.
 
-— **ZalexDev**
+###### License
+
+GNU General Public License v2.0 — See [License](./License)
